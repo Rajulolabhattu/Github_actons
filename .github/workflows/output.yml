@@ -1,8 +1,5 @@
 name: output
-on: 
-    workflow_run:
-        workflows: ["testing"]
-        types: [completed]
+on: workflow_dispatch
 
 jobs:
     info_job:
