@@ -1,0 +1,12 @@
+name: output
+on: 
+    workflow_run:
+        workflows: ["testing"]
+        types: [completed]
+
+jobs:
+    info_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: List jobs and their statuses
+              run: echo "${{ toJson(github) }}"
